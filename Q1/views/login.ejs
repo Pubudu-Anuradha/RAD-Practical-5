@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="icons">
+          <!-- Add font awesome icons -->
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+        <hr />
+        <form action="/login" method="post">
+          <div class="field">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="field">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <br />
+            <div class="remember">
+              <div class="left">
+                <input type="checkbox" name="remember" id="rem" /> Remember me
+              </div>
+              <div class="right">
+                <a href="#">Forgot password?</a>
+              </div>
+            </div>
+          </div>
+          <% if (error) { %>
+          <div class="err">Invalid username or password</div>
+          <% } %>
+          <div>
+            <button type="submit">LOGIN</button>
+          </div>
+          <div class="reg">
+            Dont have an account?
+            <a class="register" href="/register"> Register </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
