@@ -33,8 +33,10 @@
         <div class="submit">
           <button type="submit" value="submitPhoto">Submit</button>
         </div>
-        <% if (uploaded) { %>
+        <% if ((typeof uploaded !== "undefined" )&&(uploaded === "true")) { %>
         <div class="uploaded">File was uploaded!</div>
+        <% }else if(typeof uploaded !== "undefined"){ %>
+        <div class="uploaded err">Please select a file to upload</div>
         <% } %>
       </form>
     </div>

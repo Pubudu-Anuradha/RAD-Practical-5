@@ -56,3 +56,8 @@ button {
   border-radius: 1rem;
   text-align: center;
 }
+.err {
+  background-color: palevioletred;
+  color: black;
+  border: 2px solid red;
+}

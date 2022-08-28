@@ -31,11 +31,16 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 App.get("/", (req, res) => {
+  console.log(typeof req.query.uploaded);
   res.render("index", { uploaded: req.query.uploaded });
 });
 
 App.post("/", upload.single("pic"), (req, res) => {
-  res.redirect("/?uploaded=true");
+  if (!req.file) {
+    res.redirect("/?uploaded=false");
+  } else {
+    res.redirect("/?uploaded=true");
+  }
 });
 
 App.listen(port, () => {
