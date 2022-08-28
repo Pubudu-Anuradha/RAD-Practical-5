@@ -31,7 +31,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 App.get("/", (req, res) => {
-  console.log(typeof req.query.uploaded);
   res.render("index", { uploaded: req.query.uploaded });
 });
 
