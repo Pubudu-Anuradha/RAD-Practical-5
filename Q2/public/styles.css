@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+  font-family: sans-serif;
+}
+body {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.main {
+  margin-top: 10%;
+  margin-left: auto;
+  width: max-content;
+  margin-right: auto;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px 2px;
+}
+form {
+  text-align: left;
+}
+input,
+#msg {
+  margin-bottom: 1rem;
+  width: 95%;
+  height: 1.5rem;
+}
+#msg {
+  height: 2.4rem;
+}
+#pic {
+  padding: 2px;
+}
+
+button {
+  width: 90%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: blue;
+  color: white;
+  border-radius: 0.3rem;
+  height: 2rem;
+  border: none;
+}
+.submit {
+  text-align: center;
+}
+.uploaded {
+  background-color: paleturquoise;
+  border: 2px solid aqua;
+  color: blue;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+}
